@@ -1,0 +1,10 @@
+body {
+    background-image: url('../image/bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+a:hover {
+    text-decoration: none;
+}
