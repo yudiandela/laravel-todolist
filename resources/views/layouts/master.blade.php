@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>Todo List free Template</title>
+    <title>{{ config('app.name', 'Todo List App') }}</title>
 
     <!-- Bootstrap Style -->
     <link rel="stylesheet" href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}">
@@ -19,8 +19,8 @@
 
         <div class="footer">
             <div class="text-center text-white">
-                TodoList HTML Template <br>
-                [ ] with ❤ in Aceh Besar, Indonesia
+                {{ config('app.name', 'Todo List App') }} <br>
+                [ ] with ❤ in Aceh Besar (Nanggroe Aceh Darussalam), Indonesia
             </div>
         </div>
     </div>
