@@ -1,7 +1,7 @@
 {
-    "name": "yudiandela/laravel-file-upload",
-    "description": "Managemnet File Upload with Laravel Framework.",
-    "keywords": ["file-upload", "file-management", "file-upload-laravel", "file-management-laravel"],
+    "name": "laravel/laravel",
+    "description": "The Laravel Framework.",
+    "keywords": ["framework", "laravel"],
     "license": "MIT",
     "type": "project",
     "require": {

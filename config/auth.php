@@ -67,7 +67,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => File Upload Vue\User::class,
+            'model' => App\User::class,
         ],
 
         // 'users' => [
