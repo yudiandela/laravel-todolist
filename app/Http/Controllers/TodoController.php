@@ -14,8 +14,7 @@ class TodoController extends Controller
      */
     public function index()
     {
-        $todos = Todo::all();
-        return view('single', compact('todos'));
+        return view('single');
     }
 
     /**
@@ -46,8 +45,7 @@ class TodoController extends Controller
      */
     public function show(Todo $todo)
     {
-        $todos = Todo::all();
-        return view('single', compact(['todos', 'todo']));
+        return view('single', compact('todo'));
     }
 
     /**
