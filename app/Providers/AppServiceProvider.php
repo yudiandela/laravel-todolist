@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace File Upload Vue\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

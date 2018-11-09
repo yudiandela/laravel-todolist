@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace File Upload Vue;
 
 use Illuminate\Database\Eloquent\Model;
 

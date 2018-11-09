@@ -154,11 +154,11 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        File Upload Vue\Providers\AppServiceProvider::class,
+        File Upload Vue\Providers\AuthServiceProvider::class,
+        // File Upload Vue\Providers\BroadcastServiceProvider::class,
+        File Upload Vue\Providers\EventServiceProvider::class,
+        File Upload Vue\Providers\RouteServiceProvider::class,
 
     ],
 

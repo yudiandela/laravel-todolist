@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace File Upload Vue\Http\Controllers;
 
-use App\Todo;
+use File Upload Vue\Todo;
 use Illuminate\Http\Request;
 
 class TodoController extends Controller
