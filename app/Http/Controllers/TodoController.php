@@ -7,12 +7,23 @@ use Illuminate\Http\Request;
 
 class TodoController extends Controller
 {
+    /**
+     * Tampilkan index halaman awal
+     *
+     * @return void
+     */
     public function index()
     {
         $todos = Todo::all();
         return view('single', compact('todos'));
     }
 
+    /**
+     * Masukkan data inputan ke database
+     *
+     * @param Request $request
+     * @return void
+     */
     public function store(Request $request)
     {
         $request->validate([
@@ -27,12 +38,25 @@ class TodoController extends Controller
         return redirect()->route('todo.index');
     }
 
+    /**
+     * Tampilkan data yang akan di edit
+     *
+     * @param Todo $todo
+     * @return void
+     */
     public function show(Todo $todo)
     {
         $todos = Todo::all();
         return view('single', compact(['todos', 'todo']));
     }
 
+    /**
+     * Update data yang terpilih
+     *
+     * @param Request $request
+     * @param Todo $todo
+     * @return void
+     */
     public function update(Request $request, Todo $todo)
     {
         $todo->update([
@@ -42,6 +66,13 @@ class TodoController extends Controller
         return redirect()->route('todo.index');
     }
 
+    /**
+     * Update dan check data dari checkbox
+     *
+     * @param Request $request
+     * @param Todo $todo
+     * @return void
+     */
     public function check(Request $request, Todo $todo)
     {
         if ($todo->check == 'true') {
@@ -53,6 +84,12 @@ class TodoController extends Controller
         return redirect()->route('todo.index');
     }
 
+    /**
+     * Hapus data
+     *
+     * @param Todo $todo
+     * @return void
+     */
     public function destroy(Todo $todo)
     {
         $todo->delete();
