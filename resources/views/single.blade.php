@@ -19,7 +19,7 @@
         @endif
             @csrf
             <div class="form-group text-center">
-                <h3 class="text-primary" >Create Todo</h3>
+                <h3 class="text-primary" >{{ url()->current() !== route('todo.index') ? 'Update ' . $todo->todo : 'Create a new Todo' }}</h3>
                 <input value="{{ url()->current() !== route('todo.index') ? $todo->todo : '' }}" name="todo" autofocus type="text" class="form-control" placeholder="Create New Todo">
             </div>
             <button type="submit" class="btn btn-primary btn-block">Submit</button>
