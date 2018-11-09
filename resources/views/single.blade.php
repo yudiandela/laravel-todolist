@@ -11,12 +11,16 @@
             </div>
         @endif
 
-        <form action="{{ route('todo.update', $todo->id) }}" method="post" class="my-3">
+        @if (url()->current() !== route('todo.index'))
+            <form action="{{ route('todo.update', $todo->slug) }}" method="post" class="my-3">
+                @method('put')
+        @else
+            <form action="{{ route('todo.store') }}" method="post" class="my-3">
+        @endif
             @csrf
-            @method('put')
             <div class="form-group text-center">
                 <h3 class="text-primary" >Create Todo</h3>
-                <input value="{{ $todo->todo }}" name="todo" autofocus type="text" class="form-control" placeholder="Create New Todo">
+                <input value="{{ url()->current() !== route('todo.index') ? $todo->todo : '' }}" name="todo" autofocus type="text" class="form-control" placeholder="Create New Todo">
             </div>
             <button type="submit" class="btn btn-primary btn-block">Submit</button>
         </form>
